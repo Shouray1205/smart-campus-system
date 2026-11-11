@@ -1,61 +1,64 @@
 # 🎓 Smart Campus Management System
 
-Full Stack Project — React.js + Spring Boot + H2 Database (dev mode)
+**Full Stack Project — React.js + Spring Boot + H2 Database (Development Mode)**
 
 ---
 
-## ✅ Requirements — Pehle yeh install karo
+## ✅ Requirements — Install These First
 
 | Tool | Version | Download |
-|------|---------|----------|
-| **Java JDK** | 17 ya 21 | https://adoptium.net |
-| **Maven** | 3.8+ | https://maven.apache.org/download.cgi |
-| **Node.js** | 18+ | https://nodejs.org |
+|---|---|---|
+| **Java JDK** | 17 or 21 | [https://adoptium.net](https://adoptium.net) |
+| **Maven** | 3.8+ | [https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi) |
+| **Node.js** | 18+ | [https://nodejs.org](https://nodejs.org) |
 
-> Check karo installed hai ya nahi:
-> ```
-> java -version
-> mvn -version
-> node -version
-> ```
+Check whether the tools are installed by running these commands:
+
+```powershell
+java -version
+mvn -version
+node -version
+```
 
 ---
 
-## 🚀 Project Chalane ke Steps
+## 🚀 How to Run the Project
 
-### Step 1 — Backend (Spring Boot)
+### Step 1 — Start the Backend (Spring Boot)
 
 ```powershell
 cd backend
 mvn spring-boot:run
 ```
 
-- Backend start hoga: **http://localhost:8088**
-- H2 Database automatically create hoga (koi MySQL install nahi karna)
-- Seed data automatically load hoga (students, faculty, courses sab)
+- Backend will start at: **http://localhost:8088**
+- The H2 database will be created automatically (no MySQL installation required).
+- Seed data will be loaded automatically, including students, faculty members, and courses.
 
-### Step 2 — Frontend (React)
+### Step 2 — Start the Frontend (React)
 
-**Pehli baar:**
+**For the first run:**
+
 ```powershell
 cd frontend
 npm install
 npm run dev
 ```
 
-**Dobara chalana ho toh:**
+**For subsequent runs:**
+
 ```powershell
 cd frontend
 npm run dev
 ```
 
-- Frontend start hoga: **http://localhost:5173**
+- Frontend will start at: **http://localhost:5173**
 
 ---
 
-## 🌐 Browser mein open karo
+## 🌐 Open the Project in Your Browser
 
-```
+```text
 http://localhost:5173
 ```
 
@@ -64,20 +67,20 @@ http://localhost:5173
 ## 🔑 Demo Login Credentials
 
 | Role | Email | Password |
-|------|-------|----------|
+|---|---|---|
 | **Admin** | admin@campus.edu | Admin@123 |
 | **Faculty** | smith@campus.edu | Faculty@123 |
 | **Faculty** | mehra@campus.edu | Faculty@123 |
 | **Student** | alex@student.campus.edu | Student@123 |
 | **Student** | arjun@student.campus.edu | Student@123 |
 
-> Khud bhi register kar sakte ho Login page pe — "New Student" ya "New Faculty" tab se
+You can also register your own account through the Login page using the **"New Student"** or **"New Faculty"** tabs.
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 smart-campus-system/
 ├── backend/          ← Spring Boot (Java)
 │   ├── src/
@@ -90,17 +93,17 @@ smart-campus-system/
 
 ---
 
-## 🏫 Modules
+## 🏫 Project Modules
 
 | Module | Admin | Faculty | Student |
-|--------|-------|---------|---------|
-| Dashboard | ✅ | ✅ | ✅ |
+|---|---|---|---|
+| Dashboard | Full Access | View | View |
 | Student Management | CRUD | View | View |
 | Faculty Management | CRUD | View | View |
 | Courses | CRUD | View | View |
-| Attendance | Mark All | Own Records | Own Records |
+| Attendance | Mark Attendance | Own Records | Own Records |
 | Timetable | CRUD | View | View |
-| Fees | All Students | ❌ | Own Fees |
+| Fees | All Students | No Access | Own Fees |
 | Notices | CRUD | View/Post | View |
 
 ---
@@ -116,23 +119,26 @@ smart-campus-system/
 
 ## ⚠️ Common Issues
 
-**Backend start nahi ho raha?**
-- Java version check karo: `java -version` (17 ya 21 chahiye)
-- Port 8088 occupied ho toh `application.yml` mein `port: 8088` change karo
+**Backend is not starting?**
 
-**Frontend error aa rahi hai?**
-- `npm install` zaroor chalao pehli baar
-- Node.js version check karo: `node -version` (18+ chahiye)
+- Check the Java version using `java -version` (Java 17 or 21 is required).
+- If port 8088 is already occupied, change the port in `application.yml`.
 
-**Login nahi ho raha?**
-- Backend pehle start karo, phir frontend
-- Wait karo jab tak terminal mein `Started SmartCampusApplication` dikhe
+**Frontend errors?**
+
+- Make sure to run `npm install` before the first run.
+- Check the Node.js version using `node -version` (Node.js 18 or later is required).
+
+**Unable to log in?**
+
+- Start the backend before starting the frontend.
+- Wait until the terminal displays `Started SmartCampusApplication`.
 
 ---
 
-## 💻 Tech Stack
+## 💻 Technology Stack
 
-- **Frontend**: React 18, Vite, Tailwind CSS, Axios
-- **Backend**: Java 17+, Spring Boot 3, Spring Security, JWT
-- **Database**: H2 (in-memory, dev) — restart pe data reset hota hai
-- **Auth**: JWT Token based authentication
+- **Frontend:** React 18, Vite, Tailwind CSS, Axios
+- **Backend:** Java 17+, Spring Boot 3, Spring Security, JWT
+- **Database:** H2 (in-memory, development mode) — data resets when the application restarts.
+- **Authentication:** JWT-based token authentication
