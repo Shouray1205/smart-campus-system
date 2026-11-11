@@ -1,0 +1,17 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: smart-campus-backend
+  profiles:
+    active: dev
+
+jwt:
+  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+  expirationMs: 86400000
+
+logging:
+  level:
+    com.smartcampus: INFO
+    org.springframework.security: WARN

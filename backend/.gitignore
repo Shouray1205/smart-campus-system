@@ -1,0 +1,14 @@
+# Backend .gitignore
+target/
+*.class
+*.jar
+*.war
+.mvn/
+!.mvn/wrapper/
+.idea/
+*.iml
+*.iws
+.classpath
+.project
+.settings/
+*.log
